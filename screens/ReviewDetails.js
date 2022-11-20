@@ -1,13 +1,11 @@
 import { StyleSheet, Text, View, Button } from "react-native"
 
 const ReviewDetails = ({ navigation }) => {
-  const pressHandler = () => {
-    navigation.goBack()
-  }
   return (
     <View style={styles.container}>
-      <Text>Review Details screen</Text>
-      <Button title='back to home' onPress={pressHandler} />
+      <Text>{navigation.getParam("title")}</Text>
+      <Text>{navigation.getParam("body")}</Text>
+      <Text>{navigation.getParam("rating")}</Text>
     </View>
   )
 }
